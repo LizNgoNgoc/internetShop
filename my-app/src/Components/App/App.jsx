@@ -1,6 +1,7 @@
 import Header from "../Header/Header";
 import Home from "../Home/Home";
 import Range from "../Range.jsx/Range";
+import Productds from "../Products/Products";
 
 
 function App() {
@@ -9,6 +10,7 @@ function App() {
        <Header/>
        <Home/>
        <Range/>
+       <Productds/>
     </div>
   );
 }
