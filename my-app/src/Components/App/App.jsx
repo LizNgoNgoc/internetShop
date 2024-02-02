@@ -3,7 +3,7 @@ import Home from "../Home/Home";
 import Range from "../Range.jsx/Range";
 import Productds from "../Products/Products";
 import Rooms from "../Rooms/Rooms";
-
+import Furniture from "../Furniture/Furniture";
 
 function App() {
   return (
@@ -13,6 +13,7 @@ function App() {
        <Range/>
        <Productds/>
        <Rooms/>
+       <Furniture/>
     </div>
   );
 }
