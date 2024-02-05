@@ -5,10 +5,10 @@ import Footer from "../Footer/Footer";
 
 function App() {
   return (
-    <div className='mr-0 box-border'>
+    <div className='mr-0 w-[1440px] box-border'>
        <Header/>
-       {/* <HomePage/> */}
-       <ShopPage/>
+       <HomePage/>
+       {/* <ShopPage/> */}
        <Footer/>
     </div>
   );

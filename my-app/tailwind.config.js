@@ -2,7 +2,14 @@
 module.exports = {
   content: [ "./src/**/*.{js,jsx,ts,tsx}",],
   theme: {
-    extend: {},
+    fontFamily: {
+      Poppins : 'Poppins'
+    },
+    extend: {
+      backgroundImage: {
+        'homePage-bg': "url('/public/images/home_page/Mask_Group.jpeg')",
+      }
+    },
   },
   plugins: [],
 }
