@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom"
 
 export default function Header() {
-    return <section className='w-full bg-white pl-14 pr-24 py-7 flex'>
+    return <section className='w-full bg-white pl-14 pr-24 py-7 flex font-Poppins'>
         <div className="w-48 mr-64">
             <Link className="flex gap-1">
                 <img src="./images/home_page/Meubel House_Logos-05.svg" alt='img'/>
