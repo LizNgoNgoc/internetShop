@@ -1,5 +1,5 @@
 export default function Productds() {
-    return <section className="w-full mt-14 p-24">
+    return <section className="w-full mt-14 p-24 font-Poppins">
         <h3 className="font-bold text-3xl text-zinc-900 text-center mb-8">Our Products</h3>
         <div className="flex flex-col gap-8">
             <div className="flex gap-8">

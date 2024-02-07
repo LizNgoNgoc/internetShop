@@ -1,5 +1,5 @@
 export default function Range() {
-    return <section className="w-full mt-14 px-32">
+    return <section className="w-full mt-14 px-32 font-Poppins">
         <div className="w-auto text-center mb-16">
             <h3 className="font-bold text-3xl text-zinc-900">Browse The Range</h3>
             <p className="text-zinc-500 text-xl font-normal">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>

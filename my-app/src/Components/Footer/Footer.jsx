@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom"
 
 export default function Footer(){
-    return <section className="w-full px-32 mb-14">
+    return <section className="w-full px-32 mb-14 font-Poppins">
         <div className="flex gap-32">
             <div className="w-72">
                 <h3 className="font-bold text-2xl text-zinc-900 mb-12">Funiro.</h3>
