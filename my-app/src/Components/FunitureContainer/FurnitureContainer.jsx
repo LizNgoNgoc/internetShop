@@ -8,7 +8,18 @@ export default function FurnitureContainer(){
 
     return <div className="grid grid-flow-row">
         {arr.map((item, index) => {
-            return <div className="" key={index}><img src={item} alt="" className="" /></div>
+            return <div className="" key={index}>
+                <img src={item} alt="" className="" />
+                <img src={item} alt="" className="" />
+                <img src={item} alt="" className="" />
+                <img src={item} alt="" className="" />
+                <img src={item} alt="" className="" />
+                <img src={item} alt="" className="" />
+                <img src={item} alt="" className="" />
+                <img src={item} alt="" className="" />
+                <img src={item} alt="" className="" />
+                <img src={item} alt="" className="" />
+            </div>
         })}
     </div>
 
