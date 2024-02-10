@@ -10,7 +10,9 @@ export default function FurnitureContainer(){
     return <div className="grid grid-flow-row">
         {arr.map((item, index) => {
             return <div className="grid_mosaic" key={index}>
-                <div><img src={item} alt="" className="" /></div>
+                <div className={item}>
+                    <img src={item} alt="pic" className="" />
+                </div>
             </div>
         })}
     </div>
