@@ -2,7 +2,12 @@
     grid-auto-flow: dense;
     display: grid;
     grid-gap: 15px;
-    grid-template-columns: repeat(5, 1fr);
+    grid-template: 
+    "a c e f h"
+    "a c e f h" 100% 
+    "b d e g i" 100% 
+    "b d e g i";
+    ;
     align-items: center;
     justify-items: center;
 }
@@ -36,3 +41,8 @@
     grid-row: span 2;
     height: 400px;
 } 
+
+.img_center {
+    grid-column: span 2;
+
+}

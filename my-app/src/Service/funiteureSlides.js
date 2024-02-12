@@ -1,14 +1,15 @@
 export const arrCards = [
-    '/images/furniture/f1.png',
-    '/images/furniture/f2.png',
-    '/images/furniture/f3.png',
-    '/images/furniture/f4.png',
-    '/images/furniture/f5.png',
-    '/images/furniture/f6.png',
-    '/images/furniture/f7.png',
-    '/images/furniture/f8.png',
-    '/images/furniture/f9.png',
+    {img: '/images/furniture/f1.png', className:''},
+    {img: '/images/furniture/f2.png', className:''},
+    {img: '/images/furniture/f3.png', className:''},
+    {img: '/images/furniture/f7.png', className:''},
+    {img: '/images/furniture/f5.png', className:'img_center'},
+    {img: '/images/furniture/f4.png', className:''},
+    {img: '/images/furniture/f6.png', className:''},
+    {img: '/images/furniture/f8.png', className:''},
+    {img: '/images/furniture/f9.png', className:''} 
 ]
 
-// arrCards.forEach((elem) => arrCards.indexOf(2) ? elem.classList.add('wide') : elem)
+
+
 
