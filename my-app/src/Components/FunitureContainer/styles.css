@@ -2,12 +2,7 @@
     grid-auto-flow: dense;
     display: grid;
     grid-gap: 15px;
-    grid-template-areas: 
-        "a c . f h"
-        ". . e . ."
-        ". . e . ."
-        "b d . g i";
-    ;
+    grid-template-columns: ;
     align-items: center;
     justify-items: center;
 }
