@@ -10,5 +10,5 @@ export const arrCards = [
     '/images/furniture/f9.png',
 ]
 
-arrCards.forEach((elem) => arrCards.indexOf(2) ? elem.classList.add('wide') : elem)
+// arrCards.forEach((elem) => arrCards.indexOf(2) ? elem.classList.add('wide') : elem)
 
