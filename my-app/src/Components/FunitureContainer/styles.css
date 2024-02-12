@@ -1,3 +1,5 @@
+/* 6 столбцов, 3 колонки  + большую картинку позиционаруем в третьем столбце, занимающую 2 строки и 2 столбца*/
+
 .grid_mosaic {
     /* grid-auto-flow: dense;
     display: grid;
@@ -7,7 +9,7 @@
     justify-items: center; */
     display: grid;
     grid-template-columns: repeat(6, 1fr); 
-    grid-template-rows: repeat(3, 100px); 
+    grid-template-rows: repeat(3, 300px); 
     grid-gap: 10px; 
 }
  
