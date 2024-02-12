@@ -2,11 +2,11 @@
     grid-auto-flow: dense;
     display: grid;
     grid-gap: 15px;
-    grid-template: 
-    "a c e f h"
-    "a c e f h" 100% 
-    "b d e g i" 100% 
-    "b d e g i";
+    grid-template-areas: 
+        "a c . f h"
+        ". . e . ."
+        ". . e . ."
+        "b d . g i";
     ;
     align-items: center;
     justify-items: center;
