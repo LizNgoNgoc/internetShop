@@ -7,7 +7,7 @@ export default function FurnitureContainer(){
 
 
 
-    return <div className="grid_mosaic">
+    return <div className="grid_mosaic overflow-hidden">
         {arr.map((item, index) => {
             return <img src={item.img} alt="pic" key={index} className={item.className} />
         })}
