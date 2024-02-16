@@ -13,7 +13,7 @@ export default function HeaderShop() {
         <div className="bg-orange-100 h-28"></div>
         <div className="flex flex-col gap-8 mt-10">
         <div className="flex gap-8">
-            {arrProd.map((item, index) => {
+            {arrProd.map((item) => {
                 return <div className="flex flex-col gap-4" key={item.id}>
                 <img src={item.img} alt="img" />
                     <div>
@@ -28,7 +28,7 @@ export default function HeaderShop() {
             })}
         </div>
         <div className="flex gap-8">
-            {arrProd.map((item, index) => {
+            {arrProd.map((item) => {
                 return <div className="flex flex-col gap-4" key={item.id}>
                 <img src={item.img} alt="img" />
                     <div>
@@ -43,7 +43,7 @@ export default function HeaderShop() {
             })}
         </div>
         <div className="flex gap-8">
-            {arrProd.map((item, index) => {
+            {arrProd.map((item) => {
                 return <div className="flex flex-col gap-4" key={item.id}>
                 <img src={item.img} alt="img" />
                     <div>
