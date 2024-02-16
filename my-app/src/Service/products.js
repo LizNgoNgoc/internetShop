@@ -52,3 +52,30 @@ export const arrProducts = [
         rating: 5,
     },
 ]
+
+export const arrPages = [
+    {
+        id: 1,
+        name: '1',
+        img: '',
+        active: true,
+    },
+    {
+        id: 2,
+        name: '2',
+        img: '',
+        active: false,
+    },
+    {
+        id: 3,
+        name: '3',
+        img: '',
+        active: false,
+    },
+    {
+        id: 4,
+        name: 'Next',
+        img: '',
+        active: false,
+    },
+]
