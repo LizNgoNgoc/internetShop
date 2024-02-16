@@ -1,4 +1,5 @@
 import ProductsItems from "../ProductsItems/ProductsItems"
+import Garantees from "../Garantees/Garantees"
 
 export default function HeaderShop() {
     
@@ -22,5 +23,6 @@ export default function HeaderShop() {
                 <p className="font-normal text-xl">Showing 1–16 of 32 results</p>
             </div>
         <ProductsItems/>
+        <Garantees/>
     </section>
 }

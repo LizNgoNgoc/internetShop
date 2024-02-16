@@ -5,7 +5,7 @@ import { Link } from "react-router-dom"
 export default function ProductsItems() {
     const [arrProd, setArrProd] = useState(arrProducts)
 
-    return <srction>
+    return <srction className="font-Poppins">
             <div className="flex flex-col gap-8 mt-10">
                 <div className="flex gap-8">
                 {arrProd.map((item) => {
@@ -67,7 +67,7 @@ export default function ProductsItems() {
                         </div>
                     })}
                 </div>
-                <div className="flex w-auto gap-9">
+                <div className="flex w-auto gap-9 mb-11">
                     <Link><img src="./images/shopHeader/click_square.png" className="relative" alt="img" /><p className="absolute">1</p></Link>
                     <Link><img src="./images/shopHeader/square.png" className="relative" alt="img" /><p className="absolute">2</p></Link>
                     <Link><img src="./images/shopHeader/square.png" className="relative" alt="img" /><p className="absolute">3</p></Link>
