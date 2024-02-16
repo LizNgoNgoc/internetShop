@@ -1,5 +1,6 @@
 import { arrProducts } from "../../Service/products"
 import { useState } from "react"
+import { Link } from "react-router-dom"
 
 export default function ProductsItems() {
     const [arrProd, setArrProd] = useState(arrProducts)
@@ -65,6 +66,9 @@ export default function ProductsItems() {
                             </div>
                         </div>
                     })}
+                </div>
+                <div>
+                    <Link><img src="./images/range/click_square.png" alt="img" /></Link>
                 </div>
             </div>
     </srction>
