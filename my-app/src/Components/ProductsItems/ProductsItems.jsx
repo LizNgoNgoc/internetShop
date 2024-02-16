@@ -67,8 +67,11 @@ export default function ProductsItems() {
                         </div>
                     })}
                 </div>
-                <div>
-                    <Link><img src="./images/range/click_square.png" alt="img" /></Link>
+                <div className="flex w-auto gap-9">
+                    <Link><img src="./images/shopHeader/click_square.png" className="relative" alt="img" /><p className="absolute">1</p></Link>
+                    <Link><img src="./images/shopHeader/square.png" className="relative" alt="img" /><p className="absolute">2</p></Link>
+                    <Link><img src="./images/shopHeader/square.png" className="relative" alt="img" /><p className="absolute">3</p></Link>
+                    <Link><img src="./images/shopHeader/next_before.png" className="relative" alt="img" /><p className="absolute">Next</p></Link>
                 </div>
             </div>
     </srction>
