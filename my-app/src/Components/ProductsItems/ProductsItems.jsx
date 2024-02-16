@@ -1,10 +1,8 @@
 import { arrProducts } from "../../Service/products"
-import { arrPages } from "../../Service/products"
 import { useState } from "react"
 
 export default function ProductsItems() {
     const [arrProd, setArrProd] = useState(arrProducts)
-    const [arrPage, setArrPages] = useState(arrPages)
 
     return <srction>
             <div className="flex flex-col gap-8 mt-10">
@@ -69,11 +67,5 @@ export default function ProductsItems() {
                     })}
                 </div>
             </div>
-                {/* {arrPage.map((item) => {
-                    return<div className="w-full" key={item.id}>
-                        <p className="absolute">{item.name}</p>
-                        <img src={item.img} alt="img" />
-                    </div>
-                })} */}
     </srction>
 }

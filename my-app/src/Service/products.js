@@ -53,29 +53,3 @@ export const arrProducts = [
     },
 ]
 
-export const arrPages = [
-    {
-        id: 1,
-        name: '1',
-        img: './images/range/click_square.png',
-        active: true,
-    },
-    {
-        id: 2,
-        name: '2',
-        img: './images/range/square.png',
-        active: false,
-    },
-    {
-        id: 3,
-        name: '3',
-        img: './images/range/square.png',
-        active: false,
-    },
-    {
-        id: 4,
-        name: 'Next',
-        img: './images/range/next_before.png',
-        active: false,
-    },
-]
