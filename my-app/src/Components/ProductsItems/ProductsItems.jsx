@@ -67,6 +67,14 @@ export default function ProductsItems() {
                         </div>
                     })}
                 </div>
+                <div className="bg-overlayImg-bg w-[285px] h-[446px] pt-[175px]">
+                    <button className="mx-[41px] mb-[24px] bg-white w-[202px] h-[48px] text-[#B88E2F]">Show the product</button>
+                    <div className="flex gap-4 justify-center">
+                        <Link><img src="./images/range/shareBtn.png" alt="img" /></Link>
+                        <Link><img src="./images/range/compareBtn.png" alt="img" /></Link>
+                        <Link><img src="./images/range/LikeBtn.png" alt="img" /></Link>
+                    </div>
+                </div>
                 <div className="flex w-auto gap-9 mb-11 justify-center">
                     <Link><div className="bg-[#B88E2F] font-normal text-white text-xl w-[60px] h-[60px] rounded-xl p-5">1</div></Link>
                     <Link><div className="bg-[#F9F1E7] font-normal text-black text-xl w-[60px] h-[60px] rounded-xl p-5">2</div></Link>

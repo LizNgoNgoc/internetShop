@@ -9,8 +9,8 @@ module.exports = {
       backgroundImage: {
         'homePage-bg': "url('/public/images/home_page/Mask_Group.jpeg')",
       },
-      overlayImage: {
-        'overlayImg': "url('/public/images/range/Overlay.png')"
+      backgroundImage: {
+        'overlayImg-bg': "url('/public/images/range/Overlay.png')"
       }
     },
   },
