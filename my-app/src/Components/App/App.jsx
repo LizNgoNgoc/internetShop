@@ -7,7 +7,7 @@ import { Routes, Route } from "react-router-dom";
 
 function App() {
   return (
-    <div className='mr-0 w-[1440px] box-border'>
+    <div className='w-[1440px] box-border m-auto'>
        <Header/>
        <Routes>
           <Route path="/" element={<HomePage/>}/>

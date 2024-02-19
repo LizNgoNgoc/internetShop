@@ -1,0 +1,4 @@
+.cardProduct:hover .hiddenCard{
+    transition: 0.3s;
+    opacity: 1;
+}
