@@ -25,10 +25,10 @@ export default function Footer(){
             </div>
             <div className="flex flex-col gap-14">
             <p className="text-zinc-400 text-base font-medium">Newsletter</p>
-                <div>
+                <form>
                     <input type="email" placeholder="Enter Your Email Address" className="text-zinc-400 text-base font-normal border-b-2 border-zinc-900 mr-3"/>
                     <button className="text-zinc-900 text-base font-medium border-b-2 border-zinc-900">SUBSCRIBE</button>
-                </div>
+                </form>
             </div>
         </div>
         <hr className="w-11/12 text-zinc-400 my-14"/>
