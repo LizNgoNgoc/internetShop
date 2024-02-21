@@ -21,9 +21,9 @@ export default function ProductsItems() {
                             <div className="bg-overlayImg-bg opacity-0 absolute top-0 left-0 w-[285px] h-[100%] pt-[175px] hiddenCard">
                                 <button className="mx-[41px] mb-[24px] bg-white w-[202px] h-[48px] text-[#B88E2F]">Show the product</button>
                                 <div className="flex gap-4 justify-center">
-                                    <Link><img src="./images/range/shareBtn.png" alt="img" /></Link>
-                                    <Link><img src="./images/range/compareBtn.png" alt="img" /></Link>
-                                    <Link><img src="./images/range/LikeBtn.png" alt="img" /></Link>
+                                    <Link className='bg-shareBtn-bg'></Link>
+                                    <Link className='bg-compareBtn-bg'></Link>
+                                    <Link className='bg-likeBtn-bg'></Link>
                                 </div>
                             </div>
                         </div>
