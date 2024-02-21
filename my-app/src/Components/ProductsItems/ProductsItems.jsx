@@ -9,7 +9,7 @@ export default function ProductsItems() {
                 <div className="flex gap-8">
                     {arrProducts.map((item) => {
                         return <div className="flex flex-col relative gap-4 cardProduct" key={item.id}>
-                            <img src={item.img} alt="img" />
+                            <img src={item.img} className='rounded-lg' alt="img" />
                             <div>
                                 <h4 className=" text-[#3A3A3A] font-semibold text-2xl">{item.name}</h4>
                                 <p className="font-medium text-base text-[#898989]">{item.cardDescription}</p>
