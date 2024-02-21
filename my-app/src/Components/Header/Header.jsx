@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom"
+import ModalBasket from "../../Custom/ModalBasket/ModalBasket"
 
 export default function Header() {
     return <section className='w-full bg-white pl-14 pr-24 py-7 flex font-Poppins'>
@@ -22,5 +23,6 @@ export default function Header() {
             <Link><img src="./images/home_page/like.svg" alt='img'/></Link>
             <Link><img src="./images/home_page/basket.svg" alt='img'/></Link>
         </div>
+        <ModalBasket/>
     </section>
 }
