@@ -1,6 +1,11 @@
+import { useDispatch } from 'react-redux'
+import { hideModal } from '../../Redux/Slices/CustomFunctions'
+
 export default function ModalBasket() {
 
-    return<section className="w-[417px] h-[746px] absolute top-7 right-2.5 p-[20px] bg-white font-Poppins">
+    const dispatch = useDispatch()
+
+    return<section className="w-[417px] h-[746px] absolute top-7 right-2.5 p-[20px] bg-white font-Poppins"onClick={() => dispatch(hideModal)}>
         <div className="flex gap-8">
             <h3 className="font-semibold text-2xl">Shopping Cart</h3>
             <img src="./images/modal/closeBasket.png" className="w-7" alt="" />

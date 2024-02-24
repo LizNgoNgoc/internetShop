@@ -5,7 +5,7 @@ const initialState = {
 
 }
 
-export const funcSlice = ({
+export const funcSlice = createSlice({
     name: 'click',
     initialState,
     reducers: {
