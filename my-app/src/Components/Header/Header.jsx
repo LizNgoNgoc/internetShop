@@ -1,7 +1,12 @@
 import { Link } from "react-router-dom"
 import ModalBasket from "../../Custom/ModalBasket/ModalBasket"
+import { useDispatch } from "react-redux"
+import { showModal } from "../../Redux/Slices/CustomFunctions"
 
 export default function Header() {
+    const dispatch = useDispatch()
+
+
     return <section className='w-full bg-white pl-14 pr-24 py-7 flex font-Poppins'>
         <div className="w-48 mr-64">
             <Link className="flex gap-1">
@@ -21,7 +26,7 @@ export default function Header() {
             <Link><img src="./images/home_page/account.svg" alt='img'/></Link>
             <Link><img src="./images/home_page/search.svg" alt='img'/></Link>
             <Link><img src="./images/home_page/like.svg" alt='img'/></Link>
-            <Link><img src="./images/home_page/basket.svg" alt='img'/></Link>
+            <Link onClick={() => dispatch(showModal)}><img src="./images/home_page/basket.svg" alt='img'/></Link>
         </div>
         <ModalBasket/>
     </section>
