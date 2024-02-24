@@ -1,6 +1,7 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
+    modalActive: false,
 
 }
 
@@ -8,9 +9,15 @@ export const funcSlice = ({
     name: 'click',
     initialState,
     reducers: {
+        showModal: (state) => {
+            return {...state, modalActive: true}
+        },
+        hideModal: (state) => {
+            return state
+        }
 
     }
 })
 
-export const {} = funcSlice.actions
+export const {showModal, hideModal} = funcSlice.actions
 export default funcSlice.reducer
