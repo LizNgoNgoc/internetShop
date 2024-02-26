@@ -1,6 +1,12 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
+    basket: {
+        image: '',
+        name: '',
+        count: 1,
+        price: 1,
+    },
     modalActive: false,
 
 }
