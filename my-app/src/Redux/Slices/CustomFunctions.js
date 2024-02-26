@@ -16,14 +16,12 @@ export const funcSlice = createSlice({
     initialState,
     reducers: {
         showModal: (state) => {
-            return {...state, modalActive: true}
+            return {...state, modalActive: !state.modalActive}
         },
-        hideModal: (state) => {
-            return state
-        }
+     
 
     }
 })
 
-export const {showModal, hideModal} = funcSlice.actions
+export const {showModal} = funcSlice.actions
 export default funcSlice.reducer
