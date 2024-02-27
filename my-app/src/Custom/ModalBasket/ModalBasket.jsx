@@ -1,9 +1,7 @@
 import { useDispatch, useSelector } from 'react-redux'
 import { showModal } from '../../Redux/Slices/CustomFunctions'
+import { styleBasketBtn } from './Basket'
 
-
-
-const styleBasketBtn = 'border-[1px] border-black rounded-3xl text-[12px] text-black py-[6px] px-[30px]'
 
 export default function ModalBasket() {
     const view = useSelector(state => state.funcSlice.modalActive)
