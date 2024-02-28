@@ -1,14 +1,8 @@
 import { arrProducts } from "../../Service/products"
 import { Link } from "react-router-dom"
 import './product.css'
+import { links, styleLinks, styleNumbers } from "./Products"
 
-const links = [
-    {bg : 'bg-shareBtn-bg', title : 'Share'},
-    {bg : 'bg-compareBtn-bg', title : 'Compare'},
-    {bg : 'bg-likeBtn-bg', title : 'Like'},
-]
-const styleLinks = 'block bg-no-repeat text-white text-base font-semibold pl-[18px]'
-const styleNumbers = 'bg-[#B88E2F] flex justify-center items-center font-normal text-white text-xl w-[60px] h-[60px] rounded-xl p-5'
 
 export default function ProductsItems() {
 
