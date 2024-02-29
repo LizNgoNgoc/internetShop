@@ -8,7 +8,7 @@ export default function Rooms() {
             <p className="font-medium text-lg">Our designer already made a lot of beautiful prototipe of rooms that inspire you</p>
             <button className="font-bold w-52 h-16 bg-yellow-600 mt-10 text-white">Explore More</button>
         </div>
-        <div className="flex gap-4">
+        <div className="flex gap-4 overflow-hidden">
             {arrRooms.map((item,index) => {
                 return <img src={item.img} alt="pic" key={index} className={item.className} />
             })}
