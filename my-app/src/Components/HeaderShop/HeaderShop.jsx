@@ -1,5 +1,6 @@
 import ProductsItems from "../ProductsItems/ProductsItems"
 import Garantees from "../Garantees/Garantees"
+import { styleImg } from "./StyleShop"
 
 export default function HeaderShop() {
     return <section className="w-full mb-14 p-24 font-Poppins">
@@ -13,10 +14,10 @@ export default function HeaderShop() {
                 </div>
         </div>
         <div className="bg-[#F9F1E7] h-28 flex gap-28 px-44 items-center alighn-center">
-            <img src="./images/shopHeader/filter.png" className="w-[25px] h-[25px]" alt="img" />
+            <img src="./images/shopHeader/filter.png" className={styleImg} alt="img" />
             <p className="font-normal text-xl">Filter</p>
-            <img src="./images/shopHeader/cards_hum.png" className="w-[25px] h-[25px]" alt="img" />
-            <img src="./images/shopHeader/hum.png" className="w-[25px] h-[25px]" alt="img" />
+            <img src="./images/shopHeader/cards_hum.png" className={styleImg} alt="img" />
+            <img src="./images/shopHeader/hum.png" className={styleImg} alt="img" />
             <p className="font-normal text-xl">Showing 1–16 of 32 results</p>
         </div>
         <ProductsItems/>

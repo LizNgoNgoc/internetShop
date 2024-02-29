@@ -2,13 +2,8 @@ import { Link } from "react-router-dom"
 import ModalBasket from "../../Custom/ModalBasket/ModalBasket"
 import { useDispatch } from "react-redux"
 import { showModal } from "../../Redux/Slices/CustomFunctions"
+import { navs } from "./Settings"
 
-const navs = [
-    {title : 'Home', path: '/'},
-    {title : 'Shop', path: '/shop'},
-    {title : 'About', path: '/about'},
-    {title : 'Contact', path: '/contact'},
-]
 
 export default function Header() {
     const dispatch = useDispatch()

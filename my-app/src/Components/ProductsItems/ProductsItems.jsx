@@ -1,7 +1,7 @@
 import { arrProducts } from "../../Service/products"
 import { Link } from "react-router-dom"
 import './product.css'
-import { links, styleLinks, styleNumbers } from "./Products"
+import { links, styleLinks, styleNumbers, styleText } from "./Products"
 
 
 export default function ProductsItems() {
@@ -13,10 +13,10 @@ export default function ProductsItems() {
                         return <div className="flex flex-col relative gap-4 cardProduct" key={index}>
                             <img src={item.img} className='rounded-lg' alt="img" />
                             <div>
-                                <h4 className=" text-[#3A3A3A] font-semibold text-2xl">{item.name}</h4>
+                                <h4 className={styleText}>{item.name}</h4>
                                 <p className="font-medium text-base text-[#898989]">{item.cardDescription}</p>
                                 <div className="flex gap-4">
-                                    <span className=" text-[#3A3A3A] font-semibold text-2xl">Rp.{item.price}</span>
+                                    <span className={styleText}>Rp.{item.price}</span>
                                     <strike className="font-medium text-base text-[#898989]">Rp.{item.oldPrice}</strike>
                                 </div>
                             </div>
@@ -36,7 +36,6 @@ export default function ProductsItems() {
                     {[1,2,3,4].map((item, index, arr) => <Link key={index} className={styleNumbers}>
                             { arr.length === index + 1 ? 'Next' : item }
                         </Link>)}
-                   
                 </div>
             </div>
     </section>

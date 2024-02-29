@@ -1,13 +1,13 @@
 import { useDispatch, useSelector } from 'react-redux'
 import { showModal } from '../../Redux/Slices/CustomFunctions'
-import { styleBasketBtn } from './Basket'
+import { styleBasketBtn, styleModalSection } from './Basket'
 
 
 export default function ModalBasket() {
     const view = useSelector(state => state.funcSlice.modalActive)
     const dispatch = useDispatch()
 
-    return<section className={`w-[417px] h-[746px] absolute top-7 right-2.5 p-[20px] z-10 bg-white font-Poppins ${!view && 'hidden'}`}>
+    return<section className={`${styleModalSection} ${!view && 'hidden'}`}>
         <div className="flex gap-40 mb-6">
             <h3 className="font-semibold text-2xl">Shopping Cart</h3>
             <img src="./images/modal/closeBasket.png" className="w-7 cursor-pointer" alt="" onClick={() => dispatch(showModal())} />
@@ -35,6 +35,5 @@ export default function ModalBasket() {
             <button className={styleBasketBtn}>Checkout</button>
             <button className={styleBasketBtn}>Comparison</button>
         </div>
-
     </section>
 }
