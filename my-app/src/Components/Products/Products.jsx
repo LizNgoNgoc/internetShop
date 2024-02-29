@@ -1,4 +1,4 @@
-import { arrProducts } from "./SettingsProducts"
+import { arrProducts, styleBtn } from "./SettingsProducts"
 
 export default function Productds() {
     return <section className="w-full mt-14 p-24 font-Poppins">
@@ -6,7 +6,7 @@ export default function Productds() {
             <div className="flex gap-8 flex-wrap">
                 {arrProducts.map((item, index) => {
                     return <div className="flex flex-col gap-4 mb-8" key={index}>
-                            <img src={item.img}alt="img" />
+                            <img src={item.img} alt="img" />
                             <div>
                                 <h4 className=" text-[#333333] font-semibold text-2xl">{item.name}</h4>
                                 <p className="font-medium text-base text-[#898989]">{item.description}</p>
@@ -18,6 +18,6 @@ export default function Productds() {
                     </div>
                 })}
             </div>
-            <button className="text-yellow-600 border-yellow-600 font-bold w-60 h-12 border-2 block my-0 mx-auto">Show More</button>
+            <button className={styleBtn}>Show More</button>
     </section>
 }

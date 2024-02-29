@@ -8,3 +8,5 @@ export const arrProducts = [
     {img: './images/range/Pingkypng.png', name: 'Pingky', description: 'Cute bed set', price: 'Rp 7.000.000', oldPrice: 'Rp 14.000.000'},
     {img: './images/range/Potty.png', name: 'Potty', description: 'Minimalist flower pot', price: 'Rp 500.000', oldPrice: ''},
 ]
+
+export const styleBtn = "text-yellow-600 border-yellow-600 font-bold w-60 h-12 border-2 block my-0 mx-auto"
