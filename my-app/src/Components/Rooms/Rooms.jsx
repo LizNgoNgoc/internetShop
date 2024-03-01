@@ -10,7 +10,7 @@ export default function Rooms() {
         </div>
         <div className="flex gap-4 overflow-hidden">
             {arrRooms.map((item,index) => {
-                return <img src={item.img} alt="pic" key={index} className={item.className} />
+                return <img src={item.img} alt="pic" key={index} className={item.className}/>
             })}
         </div>
     </section>
