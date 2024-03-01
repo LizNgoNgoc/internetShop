@@ -1,0 +1,1 @@
+export const styleImg = 'w-[25px] h-[25px]'

@@ -1,3 +1,6 @@
+import { arrRange, stylesText } from "./SettingsRange"
+
+
 export default function Range() {
     return <section className="w-full mt-14 px-32 font-Poppins">
         <div className="w-auto text-center mb-16">
@@ -5,18 +8,12 @@ export default function Range() {
             <p className="text-[#666666] text-xl font-normal">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
         </div>
         <div className="flex gap-5">
-            <div className="flex flex-col gap-8">
-                <img src="./images/range/Dining.png" alt="" />
-                <h4 className="text-center text-[#333333] font-semibold text-2xl">Dining</h4>
-            </div>
-            <div className="flex flex-col gap-8">
-                <img src="./images/range/living.png" alt="" />
-                <h4 className="text-center text-[#333333] font-semibold text-2xl">Living</h4>
-            </div>
-            <div className="flex flex-col gap-8">
-                <img src="./images/range/bedroom.png" alt="" />
-                <h4 className="text-center text-[#333333] font-semibold text-2xl">Bedroom</h4>
-            </div>
+                {arrRange.map((item, index) => {
+                    return <div className="flex flex-col gap-8" key={index}>
+                            <img src={item.img} alt="img" />
+                            <h4 className={stylesText}>{item.name}</h4>
+                        </div>
+                })}
         </div>
 
     </section>
