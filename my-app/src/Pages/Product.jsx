@@ -16,7 +16,7 @@ export default function Product () {
     
 
 
-    return <div className={"font-Poppins my-10 mx-[auto] w-[80%]"}>
+    return <section className={"font-Poppins my-10 mx-[auto] w-[80%]"}>
         <h1>{productCard.name}</h1>
         <img src={productCard.img} alt="img"/>
         <p>{productCard.cardDescription}</p>
@@ -24,5 +24,5 @@ export default function Product () {
         <p>{productCard.oldPrice}</p>
         <p>{productCard.cardDescription}</p>
         <button className="bg-[#B88E2F] w-[202px] h-[48px]" onClick={() => dispatch(addToCart(productCard))}>Add to cart</button>
-    </div>
+    </section>
 }
