@@ -22,7 +22,7 @@ export default function Product () {
         <p>{productCard.cardDescription}</p>
         <p>{productCard.price}</p>
         <p>{productCard.oldPrice}</p>
-        <p>{productCard.cardDescription}</p>
+        <p>{productCard.description}</p>
         <button className="bg-[#B88E2F] w-[202px] h-[48px]" onClick={() => dispatch(addToCart(productCard))}>Add to cart</button>
     </section>
 }
