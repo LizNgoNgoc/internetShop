@@ -20,20 +20,24 @@ export default function Product () {
         <div className="mr-20">
             <img src={productCard.img} alt="img"/>  
         </div>
-        <div>
-            <h1>{productCard.cardDescription}</h1>
+        <div className="flex flex-col gap-4 font-Poppins">
+            <h1 className="font-normal text-[42px]">{productCard.cardDescription}</h1>
             <div className="flex gap-4">
-                <p>Rp.{productCard.price}</p>
-                <strike>Rp.{productCard.oldPrice}</strike>
+                <p className="text-[#9F9F9F] font-medium text-2xl">Rp.{productCard.price}</p>
+                <strike className='text-[#9F9F9F] font-medium text-lg'>Rp.{productCard.oldPrice}</strike>
             </div>
-            <p>{productCard.description}</p>
-            <p>Size</p>
-            <p>Color</p>
-            <div className="w-[605px] bg-[#D9D9D9]"></div>
-        <div>
-            <button className="border-[1px] border-black rounded-3xl text-[12px] text-black py-[6px] px-[30px]">1</button>
-            <button className="border-[1px] border-black rounded-3xl text-[12px] text-black py-[6px] px-[30px]" onClick={() => dispatch(addToCart(productCard))}>Add to cart</button>
-            <button className="border-[1px] border-black rounded-3xl text-[12px] text-black py-[6px] px-[30px]">+ Compare</button>
+            <p className="font-normal text-black text-sm">{productCard.description}</p>
+            <div>
+                <p className="text-[#9F9F9F] font-normal text-sm">Size</p>
+            </div>
+            <div>
+                <p className="text-[#9F9F9F] font-normal text-sm">Color</p>
+            </div>
+            <div className="w-[605px] bg-[#D9D9D9] devide-dashed"></div>
+        <div className="flex gap-2.5">
+            <button className="h-16 border-[1px] border-black rounded-2xl text-[12px] text-black py-[6px] px-[30px]">1</button>
+            <button className="h-16 border-[1px] border-black rounded-2xl text-[12px] text-black py-[6px] px-[30px]" onClick={() => dispatch(addToCart(productCard))}>Add to cart</button>
+            <button className="h-16 border-[1px] border-black rounded-2xl text-[12px] text-black py-[6px] px-[30px]">+ Compare</button>
         </div>  
         </div>
     </section>
