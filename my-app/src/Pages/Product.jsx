@@ -14,7 +14,7 @@ export default function Product () {
 
     useEffect(() => {
         setProductCard(arrProducts.find(item => item.id === id))
-    }, [productCard])
+    }, [productCard, id])
     
 
     return <section className="font-Poppins my-10 mx-[auto] w-[80%]">
