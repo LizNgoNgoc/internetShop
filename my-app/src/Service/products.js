@@ -8,10 +8,12 @@ export const arrProducts = [
         oldPrice: 3_500_000,
         img: '/images/range/Syltherpng.png',
         discont: 0,
-        category: '',
+        category: 'Chair',
         new: false,
         rating: 5,
-        count : 0
+        count : 0,
+        sku: 'SS001',
+        tags: 'Sofa, Chair, Home, Shop',
     },
     {
         name: 'Leviosa',
@@ -22,10 +24,12 @@ export const arrProducts = [
         oldPrice: null,
         img: '/images/range/Leviosa.png',
         discont: 0,
-        category: '',
+        category: 'Chair',
         new: false,
         rating: 5,
-        count : 0
+        count : 0,
+        sku: 'SS002',
+        tags: 'Sofa, Chair, Home, Shop',
     },
     {
         name: 'Lolito',
@@ -36,10 +40,12 @@ export const arrProducts = [
         oldPrice: 14_000_000,
         img: '/images/range/Lolito.png',
         discont: 0,
-        category: '',
+        category: 'Sofa',
         new: false,
         rating: 5,
-        count : 0
+        count : 0,
+        sku: 'SS003',
+        tags: 'Sofa, Chair, Home, Shop',
     },
     {
         name: 'Respira',
@@ -50,10 +56,12 @@ export const arrProducts = [
         oldPrice: null,
         img: '/images/range/Respiro.png',
         discont: 0,
-        category: '',
+        category: 'Sofa',
         new: false,
         rating: 5,
-        count : 0
+        count : 0,
+        sku: 'SS004',
+        tags: 'Sofa, Chair, Home, Shop',
     },
 ]
 

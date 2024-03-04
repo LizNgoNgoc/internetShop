@@ -18,7 +18,7 @@ export default function Product () {
 
     return <section className="font-Poppins my-10 mx-[auto] w-[80%] flex">
         <div className="mr-20">
-            <img src={productCard.img} alt="img"/>  
+            <img src={productCard.img} className='w-[423px] h-[500px]' alt="img"/>  
         </div>
         <div className="flex flex-col gap-4 font-Poppins">
             <h1 className="font-normal text-[42px]">{productCard.cardDescription}</h1>
@@ -33,11 +33,15 @@ export default function Product () {
             <div>
                 <p className="text-[#9F9F9F] font-normal text-sm">Color</p>
             </div>
-            <div className="w-[605px] bg-[#D9D9D9] devide-dashed"></div>
+            <div className="w-[605px] bg-[#D9D9D9] divide-solid border-[1px]"></div>
         <div className="flex gap-2.5">
-            <button className="h-16 border-[1px] border-black rounded-2xl text-[12px] text-black py-[6px] px-[30px]">1</button>
-            <button className="h-16 border-[1px] border-black rounded-2xl text-[12px] text-black py-[6px] px-[30px]" onClick={() => dispatch(addToCart(productCard))}>Add to cart</button>
-            <button className="h-16 border-[1px] border-black rounded-2xl text-[12px] text-black py-[6px] px-[30px]">+ Compare</button>
+            <button className="h-16 border-[1px] border-black rounded-2xl text-[20px] text-black py-[6px] px-[30px]">
+                <span className="mr-8">-</span>
+                <span>1</span>
+                <span className="ml-8">+</span>
+            </button>
+            <button className="h-16 border-[1px] border-black rounded-2xl text-[20px] text-black py-[6px] px-[30px]" onClick={() => dispatch(addToCart(productCard))}>Add to cart</button>
+            <button className="h-16 border-[1px] border-black rounded-2xl text-[20px] text-black py-[6px] px-[30px]">+ Compare</button>
         </div>  
         </div>
     </section>
