@@ -4,7 +4,6 @@ import { arrProducts } from "../Service/products"
 import { useDispatch } from "react-redux"
 import { addToCart } from "../Redux/Slices/CustomFunctions"
 import { Link } from "react-router-dom"
-import Productds from "../Components/Products/Products"
 
 
 
@@ -71,6 +70,5 @@ export default function Product () {
             </div>
         </div>
         <div className="w-full bg-[#D9D9D9] divide-solid border-[1px]"></div>
-        <Productds/>
     </section>
 }
