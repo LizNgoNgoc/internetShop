@@ -4,6 +4,8 @@ import { arrProducts } from "../Service/products"
 import { useDispatch } from "react-redux"
 import { addToCart } from "../Redux/Slices/CustomFunctions"
 import { Link } from "react-router-dom"
+import Productds from "../Components/Products/Products"
+
 
 
 export default function Product () {
@@ -16,7 +18,6 @@ export default function Product () {
     }, [productCard])
     
 
-
     return <section className="font-Poppins my-10 mx-[auto] w-[80%]">
         <div className="flex">
             <div className="mr-20">
@@ -28,7 +29,7 @@ export default function Product () {
                     <p className="text-[#9F9F9F] font-medium text-2xl">Rp.{productCard.price}</p>
                     <strike className='text-[#9F9F9F] font-medium text-lg'>Rp.{productCard.oldPrice}</strike>
                 </div>
-                <p className="font-normal text-black text-sm">{productCard.description}</p>
+                    <p className="font-normal text-black text-sm">{productCard.description}</p>
                 <div>
                     <p className="text-[#9F9F9F] font-normal text-sm">Size</p>
                 </div>
@@ -54,10 +55,22 @@ export default function Product () {
             </div>
         </div>
         <div className="w-full bg-[#D9D9D9] divide-solid border-[1px]"></div> 
-        <div>
-            <Link>Description</Link>
-            <Link>Additional Information</Link>
-            <Link>Reviews [5]</Link>
+            <div className="flex gap-14 mt-[48px] mb-[37px] items-center justify-center">
+                <Link className="text-black font-medium text-2xl">Description</Link>
+                <Link className="text-[#9F9F9F] font-normal text-2xl">Additional Information</Link>
+                <Link className="text-[#9F9F9F] font-normal text-2xl">Reviews [5]</Link>
+            </div>
+            <div className="flex flex-col gap-9">
+            <div className="flex flex-col gap-8">
+                <p className="text-[#9F9F9F] text-base">{productCard.description}</p>
+                <p className="text-[#9F9F9F] text-base">{productCard.description}</p>
+            </div>
+            <div className="flex gap-4 mb-[66px]">
+                <img src={productCard.img} className="w-[605px] h-[348px] rounded-lg" alt="img" />
+                <img src={productCard.img} className="w-[605px] h-[348px] rounded-lg" alt="img" />
+            </div>
         </div>
+        <div className="w-full bg-[#D9D9D9] divide-solid border-[1px]"></div>
+        <Productds/>
     </section>
 }
