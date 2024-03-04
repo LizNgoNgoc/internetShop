@@ -43,6 +43,12 @@ export default function Product () {
             <button className="h-16 border-[1px] border-black rounded-2xl text-[20px] text-black py-[6px] px-[30px]" onClick={() => dispatch(addToCart(productCard))}>Add to cart</button>
             <button className="h-16 border-[1px] border-black rounded-2xl text-[20px] text-black py-[6px] px-[30px]">+ Compare</button>
         </div>  
+        <div>
+            <p>SKU: {productCard.sku}</p>
+            <p>Category: {productCard.category}</p>
+            <p>Tags: {productCard.tags}</p>
+            <p>Share: </p>
+        </div>
         </div>
     </section>
 }
