@@ -14,20 +14,15 @@ export const funcSlice = createSlice({
             return {...state, modalActive: !state.modalActive}
         },
         addToCart : (state, action) => {
-            const card =  action.payload
-            console.log(card);
-            if(card.count !== 0){
-                return {...state, basketCards: state.basketCards.map(item => {
+            const card = action.payload
+            return {...state, basketCards: state.basketCards.find(item => item.id === card.id) 
+                ? [...state.basketCards.map( item => {
                     if(item.id === card.id){
-                        card.count++
-                        return card
-                    }else {
-                        return item
+                        return {...item, count : item.count + 1}
                     }
-                })}
-            }else {
-                // action.payload.count = 1
-                return {...state, basketCards: [...state.basketCards, action.payload]}
+                    return item
+                })]
+                : [...state.basketCards, action.payload]
             }
         },
         deleteToCart : (state, action) => {

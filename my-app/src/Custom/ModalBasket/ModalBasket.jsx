@@ -5,7 +5,7 @@ import { styleBasketBtn, styleModalSection } from './Basket'
 
 export default function ModalBasket() {
     const {modalActive, basketCards} = useSelector(state => state.funcSlice)
-
+    console.log(basketCards)
     const dispatch = useDispatch()
 
     return<section className={`${styleModalSection} ${!modalActive && 'hidden'}`}>
