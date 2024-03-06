@@ -8,7 +8,7 @@ import { navs } from "./Settings"
 export default function Header() {
     const dispatch = useDispatch()
 
-    return <section className='w-full bg-white pl-14 pr-24 py-7 flex font-Poppins'>
+    return <header className='w-full bg-white pl-14 pr-24 py-7 flex font-Poppins relative'>
         <div className="w-48 mr-64">
             <Link className="flex gap-1">
                 <img src="/images/home_page/Meubel House_Logos-05.svg" alt='img'/>
@@ -27,5 +27,5 @@ export default function Header() {
             <Link onClick={() => dispatch(showModal())}><img src="/images/home_page/basket.svg" alt='img'/></Link>
         </div>
         <ModalBasket/>
-    </section>
+    </header>
 }
