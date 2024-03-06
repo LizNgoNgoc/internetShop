@@ -24,6 +24,10 @@ export default function ModalBasket() {
                          <p>{item.count + `x`}</p><p className="text-[12px] leading-0 text font-medium text-[#B88E2F]">{item.price}</p>
                      </div>
                  </div>
+                 <div>
+                    <p>+</p>
+                    <p>-</p>
+                 </div>
                  <div onClick={() => dispatch(deleteToCart(item.id))}><img src="/images/modal/close.png"  className='w-[28px] h-[28px]' alt="img" /></div>
              </div>
             })}
