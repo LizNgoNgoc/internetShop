@@ -40,8 +40,17 @@ export const funcSlice = createSlice({
         deleteToCart : (state, action) => {
             return {...state, basketCards: state.basketCards.filter(item => item.id !== action.payload)}
         },
-        colculateProdicts : (state) => {
-            return state
+        colculateProdicts : (state, action) => {
+            const card = action.payload
+            return {...state, basketCards: state.basketCards.find(item => item.id === card.id) 
+                ? [...state.basketCards.map( item => {
+                    if(item.id === card.id){
+                        return {...item, price : item.count ** item.price}
+                    }
+                    return item
+                })]
+                : [...state.basketCards, action.payload]
+            }
         },
     }
 })

@@ -1,22 +1,14 @@
 import { useDispatch, useSelector } from 'react-redux'
 import { showModal, deleteToCart, addToCart, deleteToItemCart } from '../../Redux/Slices/CustomFunctions'
 import { styleBasketBtn, styleModalSection } from './Basket'
-import { useParams } from "react-router-dom"
-import { useEffect, useState } from "react"
-import { arrProducts } from '../../Service/products'
+
 
 
 export default function ModalBasket() {
     const {modalActive, basketCards} = useSelector(state => state.funcSlice)
-    console.log(basketCards)
+
     const dispatch = useDispatch()
 
-    const { id } = useParams()
-    const [productCard, setProductCard] = useState(arrProducts[0])
-
-    useEffect(() => {
-        setProductCard(arrProducts.find(item => item.id === id))
-    }, [productCard, id])
 
     return<section className={`${styleModalSection} ${!modalActive && 'hidden'}`}>
         <div className="flex gap-40 mb-6">
@@ -35,8 +27,8 @@ export default function ModalBasket() {
                      </div>
                  </div>
                  <div>
-                    <p onClick={() => dispatch(addToCart(productCard))}>+</p>
-                    <p onClick={() => dispatch(deleteToItemCart(productCard))}>-</p>
+                    <p onClick={() => dispatch(addToCart())}>+</p>
+                    <p onClick={() => dispatch(deleteToItemCart())}>-</p>
                  </div>
                  <div onClick={() => dispatch(deleteToCart(item.id))}><img src="/images/modal/close.png"  className='w-[28px] h-[28px]' alt="img" /></div>
              </div>
