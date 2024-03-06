@@ -46,5 +46,5 @@ export const funcSlice = createSlice({
     }
 })
 
-export const {showModal, addToCart, deleteToItemCart, deleteToCart} = funcSlice.actions
+export const {showModal, addToCart, deleteToItemCart, deleteToCart, colculateProdicts} = funcSlice.actions
 export default funcSlice.reducer
