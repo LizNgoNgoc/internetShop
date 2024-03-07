@@ -2,7 +2,7 @@ import { useEffect, useState } from "react"
 import { useParams } from "react-router-dom"
 import { arrProducts } from "../Service/products"
 import { useDispatch } from "react-redux"
-import { addToCart } from "../Redux/Slices/CustomFunctions"
+import { addToCart, deleteToItemCart } from "../Redux/Slices/CustomFunctions"
 import { Link } from "react-router-dom"
 
 
@@ -37,9 +37,9 @@ export default function Product () {
                 </div>
             <div className="flex gap-2.5">
                 <button className="h-16 border-[1px] border-black rounded-2xl text-[20px] text-black py-[6px] px-[30px]">
-                    <span className="mr-8">-</span>
-                    <span>1</span>
-                    <span className="ml-8">+</span>
+                    <span className="mr-8" onClick={() => dispatch(deleteToItemCart(productCard))}>-</span>
+                    <span>{productCard.count}</span>
+                    <span className="ml-8" onClick={() => dispatch(addToCart(productCard))}>+</span>
                 </button>
                 <button className="h-16 border-[1px] border-black rounded-2xl text-[20px] text-black py-[6px] px-[30px]" onClick={() => dispatch(addToCart(productCard))}>Add to cart</button>
                 <button className="h-16 border-[1px] border-black rounded-2xl text-[20px] text-black py-[6px] px-[30px]">+ Compare</button>
