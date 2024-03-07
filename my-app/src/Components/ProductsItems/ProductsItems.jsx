@@ -14,7 +14,7 @@ export default function ProductsItems() {
     console.log(arrProducts);
     useEffect(() => {
         setArrProducts(arr.slice().splice(0, 4))
-    }, [])
+    }, [arr])
 
     return <section className="font-Poppins">
             <div className="flex flex-col gap-8 mt-10">
