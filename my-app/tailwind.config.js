@@ -12,6 +12,8 @@ module.exports = {
         'shareBtn-bg': "url('/public/images/range/shareBtn.png')",
         'compareBtn-bg': "url('/public/images/range/compareBtn.png')",
         'likeBtn-bg': "url('/public/images/range/LikeBtn.png')",
+        'addToCard-bg' : "url('/public/images/modal/plus.png')",
+        'deleteToCard-bg' : "url('/public/images/modal/minus-sign.png')",
       },
     },
   },
