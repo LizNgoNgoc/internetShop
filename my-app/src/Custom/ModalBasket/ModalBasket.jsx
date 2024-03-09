@@ -21,16 +21,16 @@ export default function ModalBasket() {
                 return <div key={index} className="w-full flex gap-8 relative">
                     <img src={item.img} className="w-[108px] h-[105px]" alt="img" />
                     <div className="relative">
-                        <h3>{item.name}</h3>
+                        <h3 className='text-[18px] font-medium'>{item.name}</h3>
                         <div className="flex justify-center items-center gap-[15px]">
-                            <p>{item.count + `x`}</p><p className="text-[12px] leading-0 text font-medium text-[#B88E2F]">{item.count * item.price}</p>
+                            <p className='text-[18px]'>{item.count + ` x`}</p><p className="text-[18px] leading-0 text font-medium text-[#B88E2F]">{item.count * item.price}</p>
                         </div>
                         <div className='absolute left-0 bottom-[15px] flex gap-4'>
                             <p className='bg-addToCard-bg bg-cover w-[15px] h-[15px]' onClick={() => dispatch(addToItemCart(item))}></p>
                             <p className='bg-deleteToCard-bg bg-cover w-[15px] h-[15px]' onClick={() => dispatch(deleteToItemCart(item))}></p>
                         </div>
                     </div>
-                    <div onClick={() => dispatch(deleteToCart(item.id))}  className='w-[28px] h-[28px] absolute right-4 top-8'><img src="/images/modal/close.png" className='w-full' alt="img" /></div>
+                    <div onClick={() => dispatch(deleteToCart(item.id))}  className='w-[28px] h-[28px] absolute right-4 top-1'><img src="/images/modal/close.png" className='w-full' alt="img" /></div>
              </div>
             })}
            

@@ -30,9 +30,6 @@ export default function Product () {
                 </div>
                     <p className="font-normal text-black text-sm">{productCard.description}</p>
                 <div>
-                    <p className="text-[#9F9F9F] font-normal text-sm">Size</p>
-                </div>
-                <div>
                     <p className="text-[#9F9F9F] font-normal text-sm">Color</p>
                 </div>
             <div className="flex gap-2.5">
