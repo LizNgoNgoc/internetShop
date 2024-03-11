@@ -2,7 +2,7 @@ import { arrRange, stylesText } from "./SettingsRange"
 
 
 export default function Range() {
-    return <section className="w-full mt-14 px-32 font-Poppins">
+    return <section className="mt-14 px-32 font-Poppins m-auto w-[1440px]">
         <div className="w-auto text-center mb-16">
             <h3 className="font-bold text-3xl text-[#333333]">Browse The Range</h3>
             <p className="text-[#666666] text-xl font-normal">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>

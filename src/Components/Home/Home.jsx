@@ -1,5 +1,5 @@
 export default function Home() {
-    return <section className='bg-homePage-bg pt-[153px] pb-[78px] px-[58px] flex justify-end h-[716px]'>
+    return <section className='bg-homePage-bg w-[1440px] pt-[153px] pb-[78px] px-[58px] flex justify-end m-auto h-[716px]'>
         <div className="w-[643px] h-[443px] bg-[#FFF3E3] pt-[62px] pb-[37px] px-[40px]">
             <div className="flex font-Poppins flex-col gap-1">
                 <p className=" text-base text-[#333333]">New Arrival</p>

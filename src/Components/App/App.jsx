@@ -8,7 +8,7 @@ import Product from "../../Pages/Product";
 
 function App() {
   return (
-    <div className='w-[1440px] box-border m-auto'>
+    <div className='min-w-[1440px] flex flex-col items-center box-border m-auto'>
        <Header/>
        <Routes>
           <Route path="/" element={<HomePage/>}/>

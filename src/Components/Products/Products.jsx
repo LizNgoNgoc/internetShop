@@ -1,7 +1,7 @@
 import { arrProducts, styleBtn } from "./SettingsProducts"
 
 export default function Productds() {
-    return <section className="w-full mt-14 p-24 font-Poppins">
+    return <section className="mt-14 p-24 font-Poppins m-auto w-[1440px]">
         <h3 className="font-bold text-3xl text-[#333333] text-center mb-8">Our Products</h3>
             <div className="flex gap-8 flex-wrap">
                 {arrProducts.map((item, index) => {

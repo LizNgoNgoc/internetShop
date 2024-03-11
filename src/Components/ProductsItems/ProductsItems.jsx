@@ -9,12 +9,10 @@ import { links, styleLinks, styleNumbers, styleText } from "./Products"
 export default function ProductsItems() {
 
     const navigate = useNavigate()
-
     const [arr, setArrProducts] = useState(arrProducts) 
-    console.log(arrProducts);
     useEffect(() => {
-        setArrProducts(arr.slice().splice(0, 4))
-    }, [arr])
+        setArrProducts(arrProducts.slice().splice(0, 4))
+    }, [])
 
     return <section className="font-Poppins">
             <div className="flex flex-col gap-8 mt-10">

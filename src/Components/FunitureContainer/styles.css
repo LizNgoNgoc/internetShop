@@ -1,5 +1,4 @@
 .grid_mosaic {
-    overflow-x: scroll;
     width: 100%;
     display: grid;
     grid-template-columns: [one] auto [two] auto [three] auto [four] auto [five] auto;

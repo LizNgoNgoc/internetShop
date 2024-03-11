@@ -3,7 +3,7 @@ import Garantees from "../Garantees/Garantees"
 import { styleImg } from "./StyleShop"
 
 export default function HeaderShop() {
-    return <section className="w-full mb-14 p-24 font-Poppins">
+    return <section className="m-auto w-[1440px] mb-14 p-24 font-Poppins relative">
         <img className="w-full" src="./images/shopHeader/banner.png" alt="shop"/>
         <div className="absolute top-72 right-1/4">
             <h3 className="text-[#000000] text-5xl">Shop</h3>

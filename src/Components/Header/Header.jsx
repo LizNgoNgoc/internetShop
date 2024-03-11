@@ -8,15 +8,15 @@ import { navs } from "./Settings"
 export default function Header() {
     const dispatch = useDispatch()
 
-    return <header className='w-full bg-white pl-14 pr-24 py-7 flex font-Poppins fixed'>
-        <div className="w-48 mr-64">
+    return <header className='w-full bg-white justify-between pl-14 pr-24 py-7 z-[999] flex font-Poppins fixed'>
+        <div className="w-48">
             <Link className="flex gap-1">
                 <img src="/images/home_page/Meubel House_Logos-05.svg" alt='img'/>
                 <img src="/images/home_page/SkinClinic.svg" alt='img'/>
             </Link>
         </div>
         <div>
-            <nav className="flex w-auto gap-16 mx-40 font-medium">
+            <nav className="flex w-auto gap-16 font-medium">
                 {navs.map(({title, path}, index) => <Link key={index} to={path}>{title}</Link>)}
             </nav>
         </div>

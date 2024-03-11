@@ -16,7 +16,7 @@ export default function ModalBasket() {
             <img src="./images/modal/closeBasket.png" className="w-7 cursor-pointer" alt="" onClick={() => dispatch(showModal())} />
         </div>
         <div className="w-full border-[1px] border-[#D9D9D9] divide-solid"></div>
-        <div className="w-full flex flex-col gap-3 py-5 overflow-y-scroll h-[465px] mt-5">
+        <div className="w-full h-[calc(100vh-300px)] flex flex-col gap-3 py-5 overflow-y-scroll mt-5">
             {basketCards.map((item, index) => {
                 return <div key={index} className="w-full flex gap-8 relative">
                     <img src={item.img} className="w-[108px] h-[105px]" alt="img" />
@@ -37,7 +37,7 @@ export default function ModalBasket() {
         </div>
         <div className="flex gap-24 mb-5 pl-[27px] pr-[40px] py-[28px]">
             <h2 className="font-normal text-base text-black">Subtotal</h2>
-            <p className="font-semibold text-base text-[#B88E2F]">Rs. 520,000.00</p>
+            <p className="font-semibold text-base text-[#B88E2F]">Rs. {basketCards.reduce((acc, item) => acc + item.price * item.count, 0)}</p>
         </div>
         <div className="w-full border-[#D9D9D9] border-[1px] divide-solid"></div>
         <div className="flex gap-3.5 mt-[26px]">
