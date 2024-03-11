@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom"
 
 export default function Footer(){
-    return <section className="m-auto w-[1440px] px-32 mb-14 font-Poppins">
+    return <section className="m-auto w-[1440px] px-32 mb-14 mt-14 font-Poppins">
         <div className="flex gap-32">
             <div className="w-72">
                 <Link className="flex gap-1 mb-2">
