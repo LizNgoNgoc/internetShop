@@ -1,0 +1,1 @@
+export const linkStyles = "text-zinc-900 text-base font-medium"

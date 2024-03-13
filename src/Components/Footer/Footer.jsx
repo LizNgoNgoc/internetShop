@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom"
+import { linkStyles } from "./FooterStyles"
 
 export default function Footer(){
     return <section className="m-auto w-[1440px] px-32 mb-14 mt-14 font-Poppins">
@@ -12,16 +13,16 @@ export default function Footer(){
             </div>
             <div className="flex flex-col gap-14">
                 <p className="text-zinc-400 text-base font-medium">Links</p>
-                <Link className="text-zinc-900 text-base font-medium">Home</Link>
-                <Link className="text-zinc-900 text-base font-medium">Shop</Link>
-                <Link className="text-zinc-900 text-base font-medium">About</Link>
-                <Link className="text-zinc-900 text-base font-medium">Contact</Link>
+                <Link className={linkStyles}>Home</Link>
+                <Link className={linkStyles}>Shop</Link>
+                <Link className={linkStyles}>About</Link>
+                <Link className={linkStyles}>Contact</Link>
             </div>
             <div className="flex flex-col gap-14">
                 <p className="text-zinc-400 text-base font-medium">Help</p>
-                <Link className="text-zinc-900 text-base font-medium">Payment Options</Link>
-                <Link className="text-zinc-900 text-base font-medium">Returns</Link>
-                <Link className="text-zinc-900 text-base font-medium">Privacy Policies</Link>
+                <Link className={linkStyles}>Payment Options</Link>
+                <Link className={linkStyles}>Returns</Link>
+                <Link className={linkStyles}>Privacy Policies</Link>
             </div>
             <div className="flex flex-col gap-14">
             <p className="text-zinc-400 text-base font-medium">Newsletter</p>
