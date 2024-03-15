@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom"
-import { linkStyles, paragraphStyles } from "./FooterStyles"
+import { linkStyles, paragraphStyles, txtStyle } from "./FooterStyles"
 
 export default function Footer(){
     return <section className="m-auto w-[1440px] px-32 mb-14 mt-14 font-Poppins">
@@ -9,7 +9,7 @@ export default function Footer(){
                     <img src="./images/home_page/Meubel House_Logos-05.svg" alt='img'/>
                     <img src="./images/home_page/SkinClinic.svg" alt='img'/>
                 </Link>
-                <p className="text-zinc-400 text-base font-normal">400 University Drive Suite 200 Coral Gables, FL 33134 USA</p>
+                <p className={txtStyle}>400 University Drive Suite 200 Coral Gables, FL 33134 USA</p>
             </div>
             <div className="flex flex-col gap-14">
                 <p className={paragraphStyles}>Links</p>
