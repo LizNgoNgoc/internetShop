@@ -5,7 +5,7 @@ import { styleImg } from "./StyleShop"
 export default function HeaderShop() {
     return <section className="m-auto w-[1440px] mb-14 p-24 font-Poppins relative">
         <img className="w-full" src="./images/shopHeader/banner.png" alt="shop"/>
-        <div className="absolute top-72 right-1/4">
+        <div className="absolute top-[13rem] right-0 left-0 w-[135px] m-auto">
             <h3 className="text-[#000000] text-5xl">Shop</h3>
                 <div className="flex gap-2 items-center">
                     <span className="text-[#000000] font-medium text-base">Home </span>
