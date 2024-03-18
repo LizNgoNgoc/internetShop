@@ -10,7 +10,7 @@ export default function ModalBasket() {
     const dispatch = useDispatch()
 
     console.log(basketCards);
-    return<section className={`${styleModalSection} ${!modalActive && 'hidden'}`}>
+    return <section className={`${styleModalSection} ${!modalActive && 'hidden'}`}>
         <div className="flex gap-40 mb-6">
             <h3 className="font-semibold text-2xl">Shopping Cart</h3>
             <img src="./images/modal/closeBasket.png" className="w-7 cursor-pointer" alt="" onClick={() => dispatch(showModal())} />
