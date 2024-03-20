@@ -1,4 +1,5 @@
 import Garantees from "../Components/Garantees/Garantees"
+import { arrProducts } from "../Service/products"
 
 
 export default function CartPage() {
