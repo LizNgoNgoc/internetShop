@@ -22,7 +22,7 @@ export default function CartPage() {
                         <p className="w-[190px] font-medium text-base">Subtotal</p>
                         <div className="w-[28px]"></div>
                     </div>
-                    <div className="flex w-[817px] h-[65px] items-center justify-between  py-[15px]">
+                    <div className="flex w-[817px] items-center justify-between  py-[15px]">
                         <img src="" className='w-[108px]' alt="" />
                         <p className="w-[152px] text-[#9F9F9F] text-base font-normal">Asgaard sofa</p>
                         <p className="w-[175px] text-[#9F9F9F] text-base font-normal">Rs. 250,000.00</p>
