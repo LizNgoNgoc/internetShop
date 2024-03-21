@@ -1,6 +1,7 @@
 import { useDispatch, useSelector } from 'react-redux'
 import { showModal, deleteToCart, addToItemCart, deleteToItemCart } from '../../Redux/Slices/CustomFunctions'
 import { styleBasketBtn, styleModalSection } from './Basket'
+import { useNavigate } from 'react-router-dom'
 
 
 
@@ -8,12 +9,12 @@ export default function ModalBasket() {
     const {modalActive, basketCards} = useSelector(state => state.funcSlice)
 
     const dispatch = useDispatch()
-
+    const navigate = useNavigate()
     console.log(basketCards);
     return <section className={`${styleModalSection} ${!modalActive && 'hidden'}`}>
         <div className="flex gap-40 mb-6">
             <h3 className="font-semibold text-2xl">Shopping Cart</h3>
-            <img src="./images/modal/closeBasket.png" className="w-7 cursor-pointer" alt="" onClick={() => dispatch(showModal())} />
+            <img src="./images/modal/closeBasket.png" className="w-7 h-7 cursor-pointer" alt="img" onClick={() => dispatch(showModal())} />
         </div>
         <div className="w-full border-[1px] border-[#D9D9D9] divide-solid"></div>
         <div className="w-full h-[calc(100vh-300px)] flex flex-col gap-3 py-5 overflow-y-scroll mt-5">
@@ -41,7 +42,7 @@ export default function ModalBasket() {
         </div>
         <div className="w-full border-[#D9D9D9] border-[1px] divide-solid"></div>
         <div className="flex gap-3.5 mt-[26px]">
-            <button className={styleBasketBtn}>Cart</button>
+            <button className={styleBasketBtn}onClick={() => navigate('/cart')}>Cart</button>
             <button className={styleBasketBtn}>Checkout</button>
             <button className={styleBasketBtn}>Comparison</button>
         </div>

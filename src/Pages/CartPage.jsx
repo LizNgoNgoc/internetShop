@@ -1,8 +1,14 @@
 import Garantees from "../Components/Garantees/Garantees"
-import { arrProducts } from "../Service/products"
+import { useDispatch, useSelector } from "react-redux"
+import { deleteToCart } from "../Redux/Slices/CustomFunctions"
 
 
 export default function CartPage() {
+    const basketCards = useSelector(state => state.funcSlice.basketCards)
+    console.log(basketCards)
+
+    const dispatch = useDispatch()
+
     return <section className="m-auto w-[1440px] mb-14 p-24 font-Poppins relative">
             <img className="w-full" src="./images/shopHeader/banner.png" alt="cart"/>
             <div className="absolute top-[13rem] right-0 left-0 w-[135px] m-auto">
@@ -23,24 +29,22 @@ export default function CartPage() {
                         <p className="w-[190px] font-medium text-base">Subtotal</p>
                         <div className="w-[28px]"></div>
                     </div>
-                    <div className="flex w-[817px] items-center justify-between  py-[15px]">
-                        <img src="" className='w-[108px]' alt="" />
-                        <p className="w-[152px] text-[#9F9F9F] text-base font-normal">Asgaard sofa</p>
-                        <p className="w-[175px] text-[#9F9F9F] text-base font-normal">Rs. 250,000.00</p>
-                        <p className="w-[74px] text-black text-base font-normal">1</p>
-                        <p className="w-[190px] text-black text-base font-normal">Rs. 250,000.00</p>
-                        <img src="/images/modal/basket.png" className="w-[28px]" alt="" />                    
+                    {basketCards.map((item, index) => {
+                        return<div className="flex w-[817px] items-center justify-between  py-[15px]"> 
+                                <img src={item.img} className='w-[108px]' alt="" />
+                                <p className="w-[152px] text-[#9F9F9F] text-base font-normal">{item.name}</p>
+                                <p className="w-[175px] text-[#9F9F9F] text-base font-normal">{item.price}</p>
+                                <p className="w-[32px] text-black text-base font-normal border-solid border-black rounded-[4px] block p-[2px] border-[1px] px-[10px] py-[4px]">{item.count}</p>
+                                <p className="w-[190px] text-black text-base font-normal">{item.price}</p>
+                                <img src="/images/modal/basket.png" className="w-[28px]" alt="" onClick={() => dispatch(deleteToCart(item.id))}/>                    
                     </div>
+                    })}
                 </div>
-                <div className="bg-[#F9F1E7] w-[393px] h-[390px] flex flex-col items-center py-[15px]">
+                <div className="bg-[#F9F1E7] w-[393px] flex flex-col items-center py-[25px]">
                     <h3 className="font-semibold text-[32px] mb-[61px]">Cart Totals</h3>
-                    <div className="w-[250px] flex items-start gap-16 mb-[31px]">
-                        <p className="text-base font-medium">Subtotal</p>
-                        <p className="text-base font-normal text-[#9F9F9F]">Rs. 250,000.00</p>
-                    </div>
                     <div className="w-[250px] flex items-start gap-16 mb-[42px]">
                         <p className="text-base font-medium">Total</p>
-                        <p className="text-[#B88E2F] font-medium text-[20px]">Rs. 250,000.00</p>
+                        <p className="text-[#B88E2F] font-medium text-[20px]">Rs. {basketCards.reduce((acc, item) => acc + item.price * item.count, 0)}</p>
                     </div>
                     <button className="px-[58px] py-[14px] font-medium text-[20px] rounded-[15px] border-[1px] border-solid border-black">Check Out</button>
                 </div>
