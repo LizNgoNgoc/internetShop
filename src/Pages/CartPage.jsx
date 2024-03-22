@@ -11,9 +11,8 @@ export default function CartPage() {
 
     return <section className="m-auto w-[1440px] mb-14 p-24 font-Poppins relative">
             <img className="w-full" src="./images/shopHeader/banner.png" alt="cart"/>
-            <img src="./images/modal/logo.png" alt="" />
             <div className="absolute top-[13rem] right-0 left-0 w-[135px] m-auto">
-                
+                <img src="./images/modal/logo.png" alt="logo" />
                 <h3 className="text-[#000000] text-5xl">Cart</h3>
                     <div className="flex gap-2 items-center">
                         <span className="text-[#000000] font-medium text-base">Home </span>
