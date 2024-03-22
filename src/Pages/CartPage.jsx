@@ -11,7 +11,9 @@ export default function CartPage() {
 
     return <section className="m-auto w-[1440px] mb-14 p-24 font-Poppins relative">
             <img className="w-full" src="./images/shopHeader/banner.png" alt="cart"/>
+            <img src="./images/modal/logo.png" alt="" />
             <div className="absolute top-[13rem] right-0 left-0 w-[135px] m-auto">
+                
                 <h3 className="text-[#000000] text-5xl">Cart</h3>
                     <div className="flex gap-2 items-center">
                         <span className="text-[#000000] font-medium text-base">Home </span>
@@ -34,7 +36,7 @@ export default function CartPage() {
                                 <img src={item.img} className='w-[108px]' alt="" />
                                 <p className="w-[152px] text-[#9F9F9F] text-base font-normal">{item.name}</p>
                                 <p className="w-[175px] text-[#9F9F9F] text-base font-normal">{item.price}</p>
-                                <p className="w-[32px] text-black text-base font-normal border-solid border-black rounded-[4px] block p-[2px] border-[1px] px-[10px] py-[4px]">{item.count}</p>
+                                <p className="w-[32px] text-black text-base font-normal border-solid border-black rounded-[4px] block p-[2px] border-[1px] px-[10npx] py-[4px]">{item.count}</p>
                                 <p className="w-[190px] text-black text-base font-normal">{item.price}</p>
                                 <img src="/images/modal/basket.png" className="w-[28px]" alt="" onClick={() => dispatch(deleteToCart(item.id))}/>                    
                     </div>
