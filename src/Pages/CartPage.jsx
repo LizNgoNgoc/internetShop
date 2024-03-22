@@ -1,6 +1,7 @@
 import Garantees from "../Components/Garantees/Garantees"
 import { useDispatch, useSelector } from "react-redux"
 import { deleteToCart } from "../Redux/Slices/CustomFunctions"
+import { useNavigate } from "react-router-dom"
 
 
 export default function CartPage() {
@@ -8,6 +9,7 @@ export default function CartPage() {
     console.log(basketCards)
 
     const dispatch = useDispatch()
+    const navigate = useNavigate()
 
     return <section className="m-auto w-[1440px] mb-14 p-24 font-Poppins relative">
             <img className="w-full" src="./images/shopHeader/banner.png" alt="cart"/>
@@ -47,7 +49,7 @@ export default function CartPage() {
                         <p className="text-base font-medium">Total</p>
                         <p className="text-[#B88E2F] font-medium text-[20px]">Rs. {basketCards.reduce((acc, item) => acc + item.price * item.count, 0)}</p>
                     </div>
-                    <button className="px-[58px] py-[14px] font-medium text-[20px] rounded-[15px] border-[1px] border-solid border-black">Check Out</button>
+                    <button className="px-[58px] py-[14px] font-medium text-[20px] rounded-[15px] border-[1px] border-solid border-black" onClick={() => navigate('/checkout')}>Check Out</button>
                 </div>
             </div>
             <Garantees/>

@@ -42,7 +42,7 @@ export default function ModalBasket() {
         </div>
         <div className="w-full border-[#D9D9D9] border-[1px] divide-solid"></div>
         <div className="flex gap-3.5 mt-[26px]">
-            <button className={styleBasketBtn}onClick={() => navigate('/cart')}>Cart</button>
+            <button className={styleBasketBtn} onClick={() => navigate('/cart')}>Cart</button>
             <button className={styleBasketBtn}>Checkout</button>
             <button className={styleBasketBtn}>Comparison</button>
         </div>
