@@ -1,6 +1,7 @@
 export default function Checkout() {
     return <section className="m-auto w-[1440px] mb-14 p-24 font-Poppins relative">
-         <img className="w-full" src="./images/shopHeader/banner.png" alt="cart"/>
+        <div>
+            <img className="w-full" src="./images/shopHeader/banner.png" alt="cart"/>
             <div className="absolute top-[10rem] right-0 left-0 w-[235px] m-auto">
                 <img src="./images/modal/logo.png" alt="logo" className="m-auto "/>
                 <h3 className="text-[#000000] text-5xl">Checkout</h3>
@@ -10,5 +11,7 @@ export default function Checkout() {
                         <span className="text-[#000000] font-light text-base"> Checkout</span>
                     </div>
             </div>
+        </div>
+         <div></div>
     </section>
 }
