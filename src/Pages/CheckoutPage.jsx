@@ -12,6 +12,40 @@ export default function Checkout() {
                     </div>
             </div>
         </div>
-         <div></div>
+         <div className="flex flex-col">
+            <h3>Billing details</h3>
+            <form action="" className="flex flex-col">
+                <div className="flex gap-[31px] mb-[36px]">
+                    <div className="flex flex-col">
+                        <label htmlFor="">First Name</label>
+                        <input type="text" className="border-[1px] border-solid rounded-[10px] border-[#9F9F9F] h-[75px]"/>
+                    </div>
+                    <div className="flex flex-col">
+                        <label htmlFor="">Last Name</label>
+                        <input type="text" className="border-[1px] border-solid rounded-[10px] border-[#9F9F9F] h-[75px]"/>
+                    </div>
+                </div>
+                <div className="flex flex-col gap-[22px]">
+                    <label htmlFor="">Company Name (Optional)</label>
+                    <input type="text" className="border-[1px] border-solid rounded-[10px] border-[#9F9F9F] h-[75px]"/>
+                    <label htmlFor="">Country / Region</label>
+                    <input type="text" className="border-[1px] border-solid rounded-[10px] border-[#9F9F9F] h-[75px]"/>
+                    <label htmlFor="">Street address</label>
+                    <input type="text" className="border-[1px] border-solid rounded-[10px] border-[#9F9F9F] h-[75px]"/>
+                    <label htmlFor="">Town / City</label>
+                    <input type="text" className="border-[1px] border-solid rounded-[10px] border-[#9F9F9F] h-[75px]"/>
+                    <label htmlFor="">Province</label>
+                    <input type="text" className="border-[1px] border-solid rounded-[10px] border-[#9F9F9F] h-[75px]"/>
+                    <label htmlFor="">ZIP code</label>
+                    <input type="text" className="border-[1px] border-solid rounded-[10px] border-[#9F9F9F] h-[75px]"/>
+                    <label htmlFor="">Phone</label>
+                    <input type="text" className="border-[1px] border-solid rounded-[10px] border-[#9F9F9F] h-[75px]"/>
+                    <label htmlFor="">Email address</label>
+                    <input type="text" className="border-[1px] border-solid rounded-[10px] border-[#9F9F9F] h-[75px]"/>
+                    <input type="text" className="border-[1px] border-solid rounded-[10px] border-[#9F9F9F] h-[75px]"/>
+                </div>
+            </form>
+            <div></div>
+         </div>
     </section>
 }
