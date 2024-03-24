@@ -12,7 +12,7 @@ export default function Checkout() {
                     </div>
             </div>
         </div>
-         <div className="flex flex-col">
+         <div className="flex">
             <h3>Billing details</h3>
             <form action="" className="flex flex-col">
                 <div className="flex gap-[31px] mb-[36px]">
