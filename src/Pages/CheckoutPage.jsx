@@ -45,7 +45,26 @@ export default function Checkout() {
                     <input type="text" className="border-[1px] border-solid rounded-[10px] border-[#9F9F9F] h-[75px]"/>
                 </div>
             </form>
-            <div></div>
+            <div>
+                <div>
+                    <div>
+                        <p>Product</p>
+                        <p>Subtotal</p>
+                    </div>
+                    <div>
+                        <p>Asgaard sofa x 1</p>
+                        <p>Rs. 250,000.00</p>
+                    </div>
+                    <div>
+                        <p>Subtotal</p>
+                        <p>Rs. 250,000.00</p>
+                    </div>
+                    <div>
+                        <p>Total</p>
+                        <p>Rs. 250,000.00</p>
+                    </div>
+                </div>
+            </div>
          </div>
     </section>
 }
