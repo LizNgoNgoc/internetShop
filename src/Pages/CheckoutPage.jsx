@@ -14,14 +14,14 @@ export default function Checkout() {
         </div>
          <div className="flex mt-[98px]">
          <div className="flex flex-col pt-[35px] pb-[71px] pl-[76px] pr-[79px] w-3/6">
-            <h3 className="text-3xl font-semibold">Billing details</h3>
+            <h3 className="text-3xl font-semibold mb-[36px]">Billing details</h3>
                     <form action="" className="flex flex-col">
                         <div className="flex gap-[31px] mb-[36px]">
-                            <div className="flex flex-col">
+                            <div className="flex flex-col gap-[22px]">
                                 <label htmlFor="" className="text-base font-medium">First Name</label>
                                 <input type="text" className="border-[1px] border-solid rounded-[10px] border-[#9F9F9F] h-[75px]"/>
                             </div>
-                            <div className="flex flex-col">
+                            <div className="flex flex-col gap-[22px]">
                                 <label htmlFor="" className="text-base font-medium">Last Name</label>
                                 <input type="text" className="border-[1px] border-solid rounded-[10px] border-[#9F9F9F] h-[75px]"/>
                             </div>
@@ -43,7 +43,7 @@ export default function Checkout() {
                             <input type="text" className="border-[1px] border-solid rounded-[10px] border-[#9F9F9F] h-[75px]"/>
                             <label htmlFor="" className="text-base font-medium">Email address</label>
                             <input type="text" className="border-[1px] border-solid rounded-[10px] border-[#9F9F9F] h-[75px]"/>
-                            <input type="text" className="border-[1px] border-solid rounded-[10px] border-[#9F9F9F] h-[75px]"/>
+                            <input type="text" placeholder="Additional information" className="pl-[29px] border-[1px] border-solid rounded-[10px] border-[#9F9F9F] h-[75px]"/>
                         </div>
                     </form>
             </div>  
@@ -54,38 +54,39 @@ export default function Checkout() {
                         <p className="font-medium text-2xl">Subtotal</p>
                     </div>
                     <div className="flex justify-between">
-                        <p className="text-base font-normal text-[#9F9F9F]">Asgaard sofa x 1</p>
-                        <p className="text-base font-medium">Rs. 250,000.00</p>
+                        <p className="text-base font-normal text-[#9F9F9F]">Asgaard sofa <span className="text-black text-xs font-medium">x 1</span></p>
+                        <p className="text-base font-light">Rs. 250,000.00</p>
                     </div>
                     <div className="flex justify-between">
-                        <p className="text-base font-medium">Subtotal</p>
-                        <p className="text-base font-medium">Rs. 250,000.00</p>
+                        <p className="text-base font-normal">Subtotal</p>
+                        <p className="text-base font-light">Rs. 250,000.00</p>
                     </div>
                     <div className="flex justify-between">
-                        <p className="text-base font-medium">Total</p>
-                        <p className="text-base font-medium">Rs. 250,000.00</p>
+                        <p className="text-base font-normal">Total</p>
+                        <p className="text-2xl font-bold text-[#B88E2F]">Rs. 250,000.00</p>
                     </div>
+                    <div className="border-[1px] h-[527] border-[#D9D9D9]"></div>
                 </div>
-                <div>
-                    <div className="">
-                        <input type="radio" />
+                <div className="flex flex-col gap-[11px]">
+                    <div className="mb-[14px] mt-[23px]">
+                        <input type="radio" className="mr-[5px]"/>
                         <label htmlFor="" className="text-base font-medium">Direct Bank Transfer</label>
                             <p className="text-base font-light text-[#9F9F9F]">Make your payment directly into our bank account. Please use your Order ID as the payment reference. 
                             Your order will not be shipped until the funds have cleared in our account.</p>
                     </div>
                     <div>
-                        <input type="radio" />
+                        <input type="radio" className="mr-[5px]"/>
                         <label htmlFor="" className="text-base font-medium text-[#9F9F9F]">Direct Bank Transfer</label>
                     </div>
                     <div>
-                        <input type="radio" />
+                        <input type="radio" className="mr-[5px]"/>
                         <label htmlFor="" className="text-base font-medium text-[#9F9F9F]">Cash On Delivery</label>
                     </div>
-                    <div>
-                        <p className="text-base font-light">Your personal data will be used to support your experience throughout this website, 
+                    <div className="mb-[39px]">
+                        <p className="text-base font-light mt-[11px]">Your personal data will be used to support your experience throughout this website, 
                             to manage access to your account, and for other purposes described in our <span className="font-medium">privacy policy.</span></p>
                     </div>
-                    <button className="text-xl font-normal border-[1px] border-black border-solid rounded-[15px] h-[64px] w-[318px]">Place order</button>
+                    <button className="m-auto text-xl font-normal border-[1px] border-black border-solid rounded-[15px] h-[64px] w-[318px]">Place order</button>
                 </div>
             </div>
          </div>
