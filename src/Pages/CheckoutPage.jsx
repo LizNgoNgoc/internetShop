@@ -1,4 +1,16 @@
+import { styleInp } from "./PagesStyles"
+
 export default function Checkout() {
+
+    function submitForm(e){
+        e.preventDefault()
+        const form = e.target
+        const obj = {}
+        const elements = Array.from(form.elements).filter(item => item.tagName !== 'BUTTON')
+        elements.forEach(item => obj[item.name] = item.value)
+        console.log(obj);
+    }
+
     return <section className="m-auto w-[1440px] mb-14 p-24 font-Poppins relative">
         <div>
             <img className="w-full" src="./images/shopHeader/banner.png" alt="cart"/>
@@ -12,42 +24,42 @@ export default function Checkout() {
                     </div>
             </div>
         </div>
-         <div className="flex mt-[98px]">
+        <form className="flex mt-[98px]" onSubmit={submitForm}>
          <div className="flex flex-col pt-[35px] pb-[71px] pl-[76px] pr-[79px] w-3/6">
             <h3 className="text-3xl font-semibold mb-[36px]">Billing details</h3>
-                    <form action="" className="flex flex-col">
+                    <div action="" className="flex flex-col">
                         <div className="flex gap-[31px] mb-[36px]">
-                            <div className="flex flex-col gap-[22px]">
+                            <div className="flex  w-full flex-col gap-[22px]">
                                 <label htmlFor="" className="text-base font-medium">First Name</label>
-                                <input type="text" className="border-[1px] border-solid rounded-[10px] border-[#9F9F9F] h-[75px]"/>
+                                <input type="text" required className={`${styleInp} w-full`} name="firstName"/>
                             </div>
-                            <div className="flex flex-col gap-[22px]">
+                            <div className="flex  w-full flex-col gap-[22px]">
                                 <label htmlFor="" className="text-base font-medium">Last Name</label>
-                                <input type="text" className="border-[1px] border-solid rounded-[10px] border-[#9F9F9F] h-[75px]"/>
+                                <input type="text" required className={`${styleInp} w-full`} name="lastName"/>
                             </div>
                         </div>
                         <div className="flex flex-col gap-[22px]">
                             <label htmlFor="" className="text-base font-medium">Company Name (Optional)</label>
-                            <input type="text" className="border-[1px] border-solid rounded-[10px] border-[#9F9F9F] h-[75px]"/>
+                            <input type="text" required className={styleInp} name="company"/>
                             <label htmlFor="" className="text-base font-medium">Country / Region</label>
-                            <input type="text" className="border-[1px] border-solid rounded-[10px] border-[#9F9F9F] h-[75px]"/>
+                            <input type="text" required className={styleInp} name="country"/>
                             <label htmlFor="" className="text-base font-medium">Street address</label>
-                            <input type="text" className="border-[1px] border-solid rounded-[10px] border-[#9F9F9F] h-[75px]"/>
+                            <input type="text" required className={styleInp} name="address"/>
                             <label htmlFor="" className="text-base font-medium">Town / City</label>
-                            <input type="text" className="border-[1px] border-solid rounded-[10px] border-[#9F9F9F] h-[75px]"/>
+                            <input type="text" required className={styleInp} name="town"/>
                             <label htmlFor="" className="text-base font-medium">Province</label>
-                            <input type="text" className="border-[1px] border-solid rounded-[10px] border-[#9F9F9F] h-[75px]"/>
+                            <input type="text" required className={styleInp} name="province"/>
                             <label htmlFor="" className="text-base font-medium">ZIP code</label>
-                            <input type="text" className="border-[1px] border-solid rounded-[10px] border-[#9F9F9F] h-[75px]"/>
-                            <label htmlFor="" className="text-base font-medium">Phone</label>
-                            <input type="text" className="border-[1px] border-solid rounded-[10px] border-[#9F9F9F] h-[75px]"/>
+                            <input type="text" required className={styleInp} name="zip"/>
+                            <label htmlFor="" className="text-base font-medium" >Phone</label>
+                            <input type="text" required className={styleInp} name="phone"/>
                             <label htmlFor="" className="text-base font-medium">Email address</label>
-                            <input type="text" className="border-[1px] border-solid rounded-[10px] border-[#9F9F9F] h-[75px]"/>
-                            <input type="text" placeholder="Additional information" className="pl-[29px] border-[1px] border-solid rounded-[10px] border-[#9F9F9F] h-[75px]"/>
+                            <input type="text" required className={styleInp} name="email"/>
+                            <input type="text" required placeholder="Additional information" className={styleInp} name="info"/>
                         </div>
-                    </form>
+                    </div>
             </div>  
-            <div className="w-3/6 pt-[87px] pb-[86px] pl-[38px] pr-[37px]">
+            <div className="w-3/6 pt-[100px] pb-[86px] h-1/2 sticky top-0 right-0 ml-1/2  pl-[38px] pr-[37px]">
                 <div className="flex flex-col gap-[22px]">
                     <div className="flex justify-between">
                         <p className="font-medium text-2xl">Product</p>
@@ -89,6 +101,6 @@ export default function Checkout() {
                     <button className="m-auto text-xl font-normal border-[1px] border-black border-solid rounded-[15px] h-[64px] w-[318px]">Place order</button>
                 </div>
             </div>
-         </div>
+         </form>
     </section>
 }

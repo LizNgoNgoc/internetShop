@@ -1,0 +1,1 @@
+export const styleInp = "border-[1px] border-solid rounded-[10px]  border-[#9F9F9F] h-[75px] px-[29px]"
