@@ -1,4 +1,5 @@
 import { styleInp } from "./PagesStyles"
+import Garantees from "../Components/Garantees/Garantees"
 
 export default function Checkout() {
 
@@ -102,5 +103,6 @@ export default function Checkout() {
                 </div>
             </div>
          </form>
+         <Garantees/>
     </section>
 }
