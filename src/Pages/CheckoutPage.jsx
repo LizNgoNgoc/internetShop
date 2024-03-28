@@ -1,5 +1,8 @@
 import { styleInp } from "./PagesStyles"
 import Garantees from "../Components/Garantees/Garantees"
+import { mailValidation, nameValidation, phoneValidation, addressValidation,zipValidation } from "../Service/validation"
+import { useState } from "react"
+import './stylesCheck.css'
 
 export default function Checkout() {
 
@@ -10,6 +13,16 @@ export default function Checkout() {
         const elements = Array.from(form.elements).filter(item => item.tagName !== 'BUTTON')
         elements.forEach(item => obj[item.name] = item.value)
         console.log(obj);
+    }
+
+    const[errMessage, setErrMessage] = useState({
+        email : false,
+        password : false
+    })
+
+    function handleErrMessage(e, Validation) {
+        const valid = !Validation(e)
+        setErrMessage({...errMessage, [e.target.name] : valid})
     }
 
     return <section className="m-auto w-[1440px] mb-14 p-24 font-Poppins relative">
@@ -32,31 +45,40 @@ export default function Checkout() {
                         <div className="flex gap-[31px] mb-[36px]">
                             <div className="flex  w-full flex-col gap-[22px]">
                                 <label htmlFor="" className="text-base font-medium">First Name</label>
-                                <input type="text" required className={`${styleInp} w-full`} name="firstName"/>
+                                <input type="text" required className={`${styleInp} w-full`} onInput={(e) => handleErrMessage(e, nameValidation)} name="firstName"/>
+                                <p className={`${'error'} ${errMessage.firstName ? 'show' : ''}`}>Error: please, enter your First Name</p>
                             </div>
                             <div className="flex  w-full flex-col gap-[22px]">
                                 <label htmlFor="" className="text-base font-medium">Last Name</label>
-                                <input type="text" required className={`${styleInp} w-full`} name="lastName"/>
+                                <input type="text" required className={`${styleInp} w-full`} onInput={(e) => handleErrMessage(e, nameValidation)} name="lastName"/>
+                                <p className={`${'error'} ${errMessage.lastName ? 'show' : ''}`}>Error: please, enter your Last Name</p>
                             </div>
                         </div>
                         <div className="flex flex-col gap-[22px]">
                             <label htmlFor="" className="text-base font-medium">Company Name (Optional)</label>
-                            <input type="text" required className={styleInp} name="company"/>
+                            <input type="text" required className={styleInp} onInput={(e) => handleErrMessage(e, nameValidation)} name="company"/>
+                            <p className={`${'error'} ${errMessage.company ? 'show' : ''}`}>Error: please, enter your company</p>
                             <label htmlFor="" className="text-base font-medium">Country / Region</label>
-                            <input type="text" required className={styleInp} name="country"/>
+                            <input type="text" required className={styleInp} onInput={(e) => handleErrMessage(e, nameValidation)} name="country"/>
+                            <p className={`${'error'} ${errMessage.country ? 'show' : ''}`}>Error: please, enter your country or region</p>
                             <label htmlFor="" className="text-base font-medium">Street address</label>
-                            <input type="text" required className={styleInp} name="address"/>
+                            <input type="text" required className={styleInp} name="address" onInput={(e) => handleErrMessage(e, addressValidation)}/>
+                            <p className={`${'error'} ${errMessage.address ? 'show' : ''}`}>Error: please, enter your address</p>
                             <label htmlFor="" className="text-base font-medium">Town / City</label>
-                            <input type="text" required className={styleInp} name="town"/>
+                            <input type="text" required className={styleInp} onInput={(e) => handleErrMessage(e, nameValidation)}  name="town"/>
+                            <p className={`${'error'} ${errMessage.town ? 'show' : ''}`}>Error: please, enter your city</p>
                             <label htmlFor="" className="text-base font-medium">Province</label>
-                            <input type="text" required className={styleInp} name="province"/>
+                            <input type="text" className={styleInp} onInput={(e) => handleErrMessage(e, nameValidation)} name="province"/>
                             <label htmlFor="" className="text-base font-medium">ZIP code</label>
-                            <input type="text" required className={styleInp} name="zip"/>
+                            <input type="text" required className={styleInp} name="zip" onInput={(e) => handleErrMessage(e, zipValidation)}/>
+                            <p className={`${'error'} ${errMessage.phone ? 'show' : ''}`}>Error: your ZIP code is incorrect</p>
                             <label htmlFor="" className="text-base font-medium" >Phone</label>
-                            <input type="text" required className={styleInp} name="phone"/>
+                            <input type="text" required className={styleInp} onInput={(e) => handleErrMessage(e, phoneValidation)} name="phone"/>
+                            <p className={`${'error'} ${errMessage.phone ? 'show' : ''}`}>Error: your phone is incorrect</p>
                             <label htmlFor="" className="text-base font-medium">Email address</label>
-                            <input type="text" required className={styleInp} name="email"/>
-                            <input type="text" required placeholder="Additional information" className={styleInp} name="info"/>
+                            <input type="text" required className={styleInp} onInput={(e) => handleErrMessage(e, mailValidation)} name="email"/>
+                            <p className={`${'error'} ${errMessage.email ? 'show' : ''}`}>Error: your email is incorrect</p>
+                            <input type="text" required placeholder="Additional information" onInput={(e) => handleErrMessage(e, nameValidation)} className={styleInp} name="info"/>
                         </div>
                     </div>
             </div>  
